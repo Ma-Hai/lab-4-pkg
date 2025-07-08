@@ -1,5 +1,6 @@
-# Geometry-demo
-geometry-demo is a minimal Python package for ____
+# Geometry
+Geometry is a minimal Python package for constructing Circles and Squares 
+and solving for their areas.
 
 ## Installation
 
