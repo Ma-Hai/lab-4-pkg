@@ -4,15 +4,16 @@ import math
 class Shape(ABC):
     @abstractmethod
     def area(self) -> float:
-        pass
+        """Compute and return the area of the shape."""
+        ...
         
 class Square(Shape):
     def __init__(self, side:float):
          # store side length
-        self.side_length = side
+        self.side = side
     def area(self)-> float:
          # return side**2
-        return self.side_length**2
+        return self.side**2
 
 class Circle(Shape):
     def __init__(self,radius:float):
@@ -21,7 +22,3 @@ class Circle(Shape):
     def area(self)-> float:
          # return math.pi * radius**2
         return math.pi*self.radius**2
-
-print()
-c = Circle(radius=4)
-print(c.area())

@@ -1,4 +1,6 @@
-def area_stats(*shapes):
+from geometry.shapes import Shape
+
+def area_stats(*shapes:Shape):
     if not shapes:
         raise ValueError("At least one Shape is required")
     areas = [shape.area() for shape in shapes]
@@ -9,18 +11,3 @@ def area_stats(*shapes):
     "min": min(areas),
     "max": max(areas) 
     }
-
-
-
-
-# def area_stats(*shapes):
-#  if no shapes passed:
-#  raise ValueError("At least one Shape is required")
-#  areas = [ shape.area() for shape in shapes ]
-#  return {
-#  "n": len(areas),
-#  "total": sum(areas),
-#  "mean": ...,
-#  "min": ...,
-#  "max": 
-#  }
