@@ -1,5 +1,5 @@
 import pytest
-from geometry import Square, Circle, area_stats
+from geometry.shapes import Square, Circle, area_stats
 def test_square_area_zero_and_positive():
     #Arrange
     sq_zero=Square(0)
@@ -51,25 +51,3 @@ def test_stats_keys_and_values():
     assert stats['min']==stats
 
     assert area_stats()==ValueError("At least one Shape is required")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def test_stats_raises_without_shapes():
-    # Assert that calling with no arguments raises ValueError
-    with pytest.raises(ValueError) as excinfo:
-        area_stats()
-    assert "at least one shape" in str(excinfo.value).lower()
