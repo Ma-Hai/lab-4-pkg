@@ -3,7 +3,7 @@ geometry-demo is a minimal Python package for ____
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install geometry-demo.
 
 ```bash
 pip install geometry-demo
@@ -12,14 +12,16 @@ pip install geometry-demo
 ## Usage
 
 ```python
-import geometry
+from geometry.shapes import Square, Circle
+from geometry.utils import area_stats
 
-# returns 'words'
-geometry.__init__('xxx')
+# constructs shape and defines lengths
+shape1 = Square(side_length)
+shape2 = Circle(radius)
+# returns area of shape
+shape.area()
 
-# returns 'geese'
-geometry.shapes('xxx')
-
-# returns 'phenomenon'
-geometry.utils('+++')
+# Produces statistics on areas and amount of shapes
+shapes = [shapes1,shapes2]
+area_stats(*shapes)
 ```

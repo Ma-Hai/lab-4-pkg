@@ -1,5 +1,6 @@
 import pytest
-from geometry.shapes import Square, Circle, area_stats
+from geometry.shapes import Square, Circle
+from geometry.utils import area_stats
 def test_square_area_zero_and_positive():
     #Arrange
     sq_zero=Square(0)
@@ -38,7 +39,7 @@ def test_stats_keys_and_values():
     areas = [s.area() for s in shapes]
     expected_n=len(areas)
     expected_total = sum(areas)
-    expected_mean = expected_n/expected_total
+    expected_mean = expected_total/expected_n
     expected_max=max(areas)
     expected_min=min(areas)
     stats = area_stats(*shapes)
@@ -46,8 +47,10 @@ def test_stats_keys_and_values():
     assert stats['n']==expected_n
     assert stats['total']==expected_total
     assert stats['mean']==expected_mean
-    assert stats['mean']==expected_max
-    assert stats['max']==expected_min
-    assert stats['min']==stats
 
-    assert area_stats()==ValueError("At least one Shape is required")
+    assert stats['max']==expected_max
+    assert stats['min']==expected_min
+
+def test_stats_raises_without_shapes():
+    with pytest.raises(ValueError, match="At least one Shape is required"):
+        area_stats()
