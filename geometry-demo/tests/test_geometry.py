@@ -67,6 +67,7 @@ def test_stats_keys_and_values():
 
 
 
+
 def test_stats_raises_without_shapes():
     # Assert that calling with no arguments raises ValueError
     with pytest.raises(ValueError) as excinfo:
