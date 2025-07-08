@@ -1,5 +1,5 @@
 def area_stats(*shapes):
-    if shapes:
+    if not shapes:
         raise ValueError("At least one Shape is required")
     areas = [shape.area() for shape in shapes]
     return {
