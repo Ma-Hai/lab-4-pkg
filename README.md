@@ -1,3 +1,6 @@
+*Not quite sure whether this is correct. Please give feedback on what might need
+to be changed.
+
 # Geometry
 Geometry is a minimal Python package for constructing Circles and Squares 
 and solving for their areas.
