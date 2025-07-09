@@ -7,7 +7,7 @@ and solving for their areas.
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install geometry-demo.
 
 ```bash
-pip install geometry-demo
+pip install geometry
 ```
 
 ## Usage
